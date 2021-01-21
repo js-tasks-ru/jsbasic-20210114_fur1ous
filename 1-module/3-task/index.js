@@ -7,7 +7,7 @@ function ucFirst(str) {
   if(str.length != 0){
     let newString = str[0].toUpperCase()+str.slice(1);
     alert(newString);
-    return str;
+    return newString;
   } else {
     alert('строка пустая');
     return false;

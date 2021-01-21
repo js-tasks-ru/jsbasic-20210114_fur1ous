@@ -7,10 +7,10 @@
 function truncate(str, maxlength) {
 
   if(str.length>maxlength) {
-    let newStr = str.substring(0,19) + '...'
+    let newStr = str.substring(0,19) + '...';
     alert(newStr);
 
-    return str;
+    return newStr;
   }
 }
 
