@@ -13,16 +13,14 @@ function print(text) {
  */
 function isValid(name) {
 
-  console.log(name.length);
-
   if (Boolean(name) === null) {
-    console.log( 'Пустое значение');
+    alert( 'Пустое значение');
   }
   else  if( name.length < 4) {
-    console.log( 'Мало букв' );
+    alert( 'Мало букв' );
   }
   else  if( name.includes(' ')) {
-    console.log( 'Пробел в имени' );
+    alert( 'Пробел в имени' );
   }
   else {
     return true;

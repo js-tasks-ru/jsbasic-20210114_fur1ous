@@ -5,11 +5,10 @@
  * @returns {string}
  */
 function truncate(str, maxlength) {
-  console.log(str, str.length);
 
   if(str.length>maxlength) {
     let newStr = str.substring(0,19) + '...'
-    console.log(newStr);
+    alert(newStr);
 
     return str;
   }

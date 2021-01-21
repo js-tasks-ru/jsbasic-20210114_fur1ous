@@ -6,10 +6,10 @@
 function ucFirst(str) {
   if(str.length != 0){
     let newString = str[0].toUpperCase()+str.slice(1);
-    console.log(newString);
+    alert(newString);
     return str;
   } else {
-    console.log('строка пустая');
+    alert('строка пустая');
     return false;
   }
 }

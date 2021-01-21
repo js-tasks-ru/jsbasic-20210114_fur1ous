@@ -4,10 +4,9 @@
  * @returns {boolean}
  */
 function checkSpam(str) {
-  console.log(str);
 
   if (str.includes('xxx') == true || str.includes('1XbeT') == true) {
-    console.log('Спам');
+    alert('Спам');
     return false;
   } else {
     return true;
