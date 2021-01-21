@@ -15,7 +15,7 @@ function isValid(name) {
 
   console.log(name.length);
 
-  if (Boolean(name) != null) {
+  if (Boolean(name) === null) {
     console.log( 'Пустое значение');
   }
   else  if( name.length < 4) {
@@ -25,7 +25,7 @@ function isValid(name) {
     console.log( 'Пробел в имени' );
   }
   else {
-    console.log('Проверка прошла');
+    return true;
   }
 }
 
