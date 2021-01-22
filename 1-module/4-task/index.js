@@ -6,7 +6,6 @@
 function checkSpam(str) {
 
   if (str.includes('xxx') == true || str.includes('1XbeT') == true) {
-    alert('Спам');
     return false;
   } else {
     return true;
