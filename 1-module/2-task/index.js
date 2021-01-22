@@ -13,7 +13,7 @@ function print(text) {
  */
 function isValid(name) {
 
-  if (!name || 0 === name.length || name.length < 4 || name.includes(' ')){
+  if (!name || 0 === name.length || name.length < 4 || name.includes(' ')) {
     return false;
   }
   else {
@@ -27,7 +27,7 @@ function sayHello() {
   if (isValid(userName)) {
     print(`Welcome back, ${userName}!`);
   } else {
-    print('Некорректное имя');
+    return false;
   }
 }
 
