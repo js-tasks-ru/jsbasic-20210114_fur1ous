@@ -4,12 +4,18 @@
  * @returns {string}
  */
 function ucFirst(str) {
-  if(str || !str){
+  if (str) {
     let newString = str[0].toUpperCase()+str.slice(1);
-    return newString;
-  } else {
+    str = newString;
+    return str;
+  }
+  else if (str=='') {
+    return str;
+  }
+
+  else {
     return false;
   }
 }
 
-ucFirst('обрпал имсьрп');
+ucFirst('');
