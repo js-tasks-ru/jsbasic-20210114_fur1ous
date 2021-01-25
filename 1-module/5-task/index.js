@@ -5,5 +5,14 @@
  * @returns {string}
  */
 function truncate(str, maxlength) {
-  // ваш код...
+
+  if(str.length>maxlength) {
+    let newStr = str.substring(0,19) + "…";
+    str = newStr;
+    return str;
+  } else {
+    return str;
+  }
 }
+
+truncate('Вот, что мне хотелось бы сказать на эту тему:', 20);

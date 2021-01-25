@@ -4,5 +4,12 @@
  * @returns {boolean}
  */
 function checkSpam(str) {
-  // ваш код...
+
+  if (str.includes('xxx') == true || str.includes('1XbeT') == true) {
+    return true;
+  } else {
+    return false;
+  }
 }
+
+checkSpam('dfsadfasd xxx');
