@@ -10,6 +10,8 @@ function truncate(str, maxlength) {
     let newStr = str.substring(0,19) + '...';
 
     return newStr;
+  } else {
+    return str;
   }
 }
 
