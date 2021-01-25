@@ -4,7 +4,7 @@
  * @returns {string}
  */
 function ucFirst(str) {
-  if(str){
+  if(str || !str){
     let newString = str[0].toUpperCase()+str.slice(1);
     return newString;
   } else {

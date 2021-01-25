@@ -8,8 +8,8 @@ function truncate(str, maxlength) {
 
   if(str.length>maxlength) {
     let newStr = str.substring(0,19) + '...';
-
-    return newStr;
+    str = newStr;
+    return str;
   } else {
     return str;
   }
