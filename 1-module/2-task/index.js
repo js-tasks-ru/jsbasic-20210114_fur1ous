@@ -21,14 +21,14 @@ function isValid(name) {
   }
 }
 
-function sayHello() {
-  let userName = prompt('Введите ваше имя');
-
-  if (isValid(userName)) {
-    print(`Welcome back, ${userName}!`);
-  } else {
-    return false;
-  }
-}
-
-sayHello();
+// function sayHello() {
+//   let userName = prompt('Введите ваше имя');
+//
+//   if (isValid(userName)) {
+//     print(`Welcome back, ${userName}!`);
+//   } else {
+//     return false;
+//   }
+// }
+//
+// sayHello();
