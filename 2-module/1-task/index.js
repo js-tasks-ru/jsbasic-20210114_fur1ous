@@ -17,7 +17,7 @@ function sumSalary(obj) {
   let sumSal = 0;
 
   for(let key in obj) {
-    if (typeof(obj[key]) === 'number'){
+    if (typeof(obj[key]) === 'number' && obj[key]!== undefined && obj[key]!== Infinity && obj[key]!== -Infinity) {
       sumSal += obj[key];
     }
   }
