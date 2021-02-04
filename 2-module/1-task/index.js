@@ -17,7 +17,7 @@ function sumSalary(obj) {
   let sumSal = 0;
 
   for(let key in obj) {
-    if (isNaN(obj[key]) == false && isFinite(obj[key]) == true) {
+    if (isNaN(obj[key]) == false && isFinite(obj[key]) == true ) {
       sumSal += obj[key];
     }
   }
