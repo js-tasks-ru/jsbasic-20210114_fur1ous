@@ -3,52 +3,37 @@
  * @param {Element} table
  */
 function highlight(table) {
-  let row = table.getElementsByTagName('tr');
-  let positionGender;
-  let positionAge;
-  let positionStatus;
+  let tbody = table.getElementsByTagName('tbody')[0];
+  let trs = tbody.getElementsByTagName('tr');
 
-  for (let i = 0; i < row[0].children.length; i++) {
-    if (row[0].children[i].innerHTML === 'Age') {
-      positionAge = i;
+  Array.from(trs).forEach(
+    row => {
+      const statusCell = row.getElementsByTagName('td')[3];
 
+      if(statusCell.getAttribute('data-available') === "true") {
+        row.classList.add('available');
+      }
+
+      else if(statusCell.getAttribute('data-available') === "false") {
+        row.classList.add('unavailable');
+      }
+
+      else if (!statusCell.dataset.available) {
+        row.setAttribute('hidden', 'hidden');
+      }
+
+      const genderCell = row.getElementsByTagName('td')[2];
+      if(genderCell.textContent === 'm') {
+        row.classList.add('male');
+      }
+      else{
+        row.classList.add('female');
+      }
+
+      const ageCell = row.getElementsByTagName('td')[1];
+      if(Number(ageCell.textContent) < 18) {
+        row.style.textDecoration = 'line-through';
+      }
     }
-    if (row[0].children[i].innerHTML === 'Gender') {
-      positionGender = i;
-
-    }
-    if (row[0].children[i].innerHTML === 'Status') {
-      positionStatus = i;
-
-    }
-  };
-
-  let classContainer = {
-    m: 'male',
-    f: 'female',
-    true: 'available',
-    false: 'unavailable'
-  }
-
-  for (let k = 1; k < row.length; k++) {
-    let classGender = row[k].children[positionGender];
-
-    classGender.parentNode.classList.add(classContainer[classGender.innerHTML]);
-
-    let classAge = row[k].children[positionAge].innerHTML;
-
-    if (classAge < 18) {
-      classGender.parentNode.setAttribute('style', 'text-decoration: line-through');
-    }
-
-    let classStatus = row[k].children[positionStatus];
-
-    if (classStatus.hasAttribute('data-available')) {
-      let elem = classStatus.getAttribute('data-available');
-
-      classStatus.parentNode.classList.add(classContainer[elem]);
-    } else {
-      classStatus.parentNode.hidden = true;
-    }
-  }
+  );
 }
