@@ -21,4 +21,5 @@ function showSalary(users, age){
 
   return userOld.join('\n');
 
-}
+};
+
