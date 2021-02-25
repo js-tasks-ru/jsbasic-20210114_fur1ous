@@ -4,5 +4,17 @@
  * @return {HTMLUListElement}
  */
 function makeFriendsList(friends) {
-  // ваш код...
+
+  let newList = document.createElement('ul');
+
+  let items = [];
+  for (let item of friends) {
+    items.push(item.firstName+ ' '+ item.lastName);
+  }
+
+  items.map(item => {
+    newList.innerHTML += '<li>'+ item +'</li>';
+  });
+
+  return newList;
 }

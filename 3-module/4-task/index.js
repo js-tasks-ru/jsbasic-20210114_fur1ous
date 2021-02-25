@@ -16,9 +16,10 @@ function showSalary(users, age){
   }
 
   let userOld = newUser.map(item => {
-    return `${item.name}, ${item.balance}`
+    return `${item.name}, ${item.balance}`;
   });
 
   return userOld.join('\n');
 
 };
+
